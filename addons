@@ -13,6 +13,8 @@ getgenv().win = ui:Create({
 	ToggledSideBar = true
 })
 
+getgenv().win = win
+
 local hometab = win:Tab("Home")
 local maintab = win:Tab("Blatant")
 local maintab2 = win:Tab("Silent")
@@ -31,6 +33,7 @@ exploittab:Label("This Tab Comes With Useful Features.")
 
 --- IGNORE THESE
 local buffers = {}
+getgenv().buffers = buffers 
 loadstring(game:HttpGet("https://pastebin.com/raw/8XJh7dzh"))()
 repeat
     task.wait()
